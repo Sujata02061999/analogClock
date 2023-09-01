@@ -3,14 +3,27 @@
     padding: 0;
     box-sizing: border-box;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background-color: #212121;
+    color: #ffffff;
+    flex-direction: column;
+
+}
+h1{
+    line-height: 100px;
+}
+#clocks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex-direction: column;
+
 }
 .container{
     position: relative;
@@ -57,4 +70,39 @@ body{
     width: 4px;
     height: 70px;
     border-radius: 8px;
+}
+.stopWatch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+.stopwatch{
+    background-color: rgba(65, 56, 66, 0.9);
+    padding: 20px 24px;
+    border-radius: 10px;
+    width: 20em;
+}
+.timerDisplay{
+    font-size: 50px;
+    font-weight: 600;
+    justify-content: center;
+    display: flex;
+}
+.buttons{
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.btn{
+    font-size: 30px;
+    color: rgb(250, 248, 248);
+    border: none;
+    background: none;
+    /* align-items: center;
+    justify-content: center; */
+    background-color: var(--clr);
+    padding: 12px 24px;
+    margin-inline: 2px;
+    border-radius: 12px;
+    cursor: pointer;
 }
