@@ -21,7 +21,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
+    min-height: 40vh;
     flex-direction: column;
 
 }
@@ -71,6 +71,64 @@ h1{
     height: 70px;
     border-radius: 8px;
 }
+.heading{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* Digital Clock */
+.clockDigi{
+    min-height: 40vh;
+}
+.clockformat{
+    background: url(./images/bcg_format_clock.jpg) no-repeat;
+    background-size: cover;
+    width: 25em;
+    height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-direction: ; */
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.7);
+
+    }
+#time{
+    color: rgba(0, 9, 10, 0.87);
+    font-weight: bold;
+    font-size: xx-large;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), 0px 0px 10px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 10px;
+}
+.clockformat span{
+    position: relative;
+    right: 15%;
+    top: -13%;
+    margin-left: 5px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .stopWatch{
     display: flex;
     align-items: center;

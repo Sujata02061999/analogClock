@@ -31,13 +31,21 @@ let mins = 0o0 ;
 let secs = 0o0 ;
 let msec = 0o0 ;
 
+mins = mins <10 ? `0${mins}` : mins;
+secs = secs <10 ? `0${secs}` : secs;
+msec =  msec <10 ? `0${msec}` : msec;
+
+timerDisplay.innerHTML = `${mins} : ${secs} : ${msec}`; 
+
+
+
 let timerId = null;
 
 startBtn.addEventListener('click', function(){
   if(timerId !== null){
     clearInterval(timerId);
   }
-  timerId = setInterval(startTimer, 1000);
+  timerId = setInterval(startTimer, 10);
 });
 
 stopBtn.addEventListener('click', function(){ 
@@ -67,4 +75,25 @@ function startTimer(){
   let msecString = msec < 0o0 ? `0$(msec)` : msec;
   
   timerDisplay.innerHTML = `${minsString} : ${secsString} : ${msecString}`;
+}
+
+const time = document.getElementById('time');
+const timeformat = document.getElementById('timeformat');
+
+document.addEventListener('DOMContentLoaded' , () => {
+   setInterval( showTime, 1000);
+});
+
+const showTime = () =>{
+  let date = new Date();
+  let hr = date.getHours();
+  let min = date.getMinutes();
+  let secs = date.getSeconds();
+
+   min = min <10 ? `0${min}` : min;
+   secs = secs <10 ? `0${secs}` : secs;
+
+  time.innerHTML = `${hr} : ${min} : ${secs}`
+  timeformat. innerHTML = hr>12 ? "PM" : "AM"; 
+  //console.log("hours" +hr + "mins" + mins + "secs" + secs);
 }
